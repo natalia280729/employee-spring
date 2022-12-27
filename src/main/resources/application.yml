@@ -1,0 +1,9 @@
+server: 
+  port: 9990
+  servlet:
+    contextPath: /employee-management-api/api/v1
+      
+logging:
+   level:
+      org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG      
+  

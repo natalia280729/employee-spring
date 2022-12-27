@@ -1,0 +1,28 @@
+
+CREATE TABLE public.employee (
+    id int4 NOT NULL,
+    emp_name varchar(20) NULL,
+    "password" varchar(20) NULL,
+    gender varchar(20) NULL,
+    birthday timestamp NOT NULL,
+    dep_id int4 NULL,
+    imp_role_id int4 NULL,
+    "rank" int4 NULL,
+    tel varchar(20) NULL,
+    email varchar(30) NULL,
+    info varchar(200) NULL,
+    CONSTRAINT employee_pkey PRIMARY KEY (id)
+);
+
+CREATE SEQUENCE public.sec_employees
+    INCREMENT BY 1
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    START 1
+    CACHE 1
+    NO CYCLE;
+
+ALTER TABLE public.employee ALTER COLUMN id SET DEFAULT nextval('sec_employees');
+
+
+http://localhost:9990/employee-management-api/api/v1/swagger-ui.html

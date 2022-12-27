@@ -1,0 +1,16 @@
+server:
+  port: 9990
+  servlet:
+    contextPath: /employee-management-api/api/v1
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+  datasource:
+    db:
+      platform: postgres
+      jdbc-url: jdbc:postgresql://localhost:8094/employees
+      password: postgres
+      username: postgres
+      driverClassName: org.postgresql.Driver
+
